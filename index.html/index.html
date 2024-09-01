@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - REnascer nota 1000</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js" defer></script> <!-- Inclua o JavaScript -->
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo.png" onclick="window.location.href='index.html'">
+        </div>
+
+        <nav>
+            <ul> 
+                <li><a href="index.html">Home</a></li>
+                <li><a href="recursos.html">Planos</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="#" id="login-btn">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <h1>Redação Nota 1000: Guia Completo para Estrutura e Planejamento!</h1>
+        <h2>Aqui você encontrará dicas e recursos para melhorar suas habilidades de redação.</h2>
+<p>Antes de começarmos a escrever uma redação precisamos montar um projeto de texto, que nada mais é do que um planejamento prévio que o escritor (você) faz antes de começar a redigir o texto final. Esse planejamento é crucial para garantir que a redação seja bem estruturada, coerente e eficaz na comunicação das ideias.</p>
+<p>
+ Se você está obtendo uma nota de 600 pontos ou menos em suas redações, revisar a estrutura do seu texto pode fazer uma grande diferença. Em geral, uma boa redação é dividida em três partes principais: introdução, desenvolvimento e conclusão(incluindo a proposta de intervenção). O formato mais eficaz e frequentemente recomendado é o de <i>quatro parágrafos</i>. Apesar de existirem textos excepcionais com três ou cinco parágrafos, o padrão de quatro parágrafos costuma ser mais eficaz e comum entre as redações nota 1000, considerar esse formato pode ajudar a melhorar a clareza e a coesão do seu texto.
+</p>
+     <p>
+    Relembrando: uma redação dissertativa argumentativa precisa ter introdução, desenvolvimente e conclusão. Essa divisão em paragráfos fica da seguinte forma:
+     </p>
+  <!-- Blocos Centralizados -->
+  <div class="blocos-container">
+    <div class="blocos">
+        <div class="bloco">Introdução</div>
+        <div class="bloco">Desenvolvimento 1</div>
+        <div class="bloco">Desenvolvimento 2</div>
+        <div class="bloco">Conclusão/Proposta de Intervenção</div>
+    </div>
+</div>
+
+<a href="exemplosred.html" class="exemplosred">Exemplos de redações nota 1000 com essa estrutura</a>
+
+        <!-- Seções de opção -->
+        <div class="options">
+            <div class="option-box" onclick="window.location.href='gratuito.html'">
+                <img src="images/free_icon.png" alt="Free" class="option-icon">
+                <h2>Acesso Gratuito</h2>
+                <p>Continue melhorando sua redação com nossos recursos gratuitos! Aprenda, pratique e receba uma correção por semana.</p>
+            </div>
+            <div class="option-box premium" onclick="window.location.href='premium.html'">
+                <img src="images/premium_icon.png" alt="Premium" class="option-icon">
+                <h2>Assinatura Premium</h2>
+                <p>Aprimore suas habilidades com nosso plano Premium por R$ 29,99. Acesso a modelos prontos, citações, argumentações e muito mais!</p>
+            </div>
+        </div>
+
+
+        <!-- Caixa de login que será exibida ou escondida -->
+        <div id="login-container" class="login-container hidden">
+            <button class="close-btn" onclick="closeLogin()">×</button>
+            <form action="login_process.php" method="post">
+                <label for="username">Usuário:</label>
+                <input type="text" id="username" name="username" required>
+               
+                <label for="password">Senha:</label>
+                <input type="password" id="password" name="password" required>
+               
+                <button type="submit">Entrar</button>
+            </form>
+        </div>
+       
+    </main>
+    <footer>
+        <p>© 2024 Site de Redação | Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
