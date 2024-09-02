@@ -23,3 +23,8 @@ document.addEventListener('DOMContentLoaded', () => {
 function closeLogin() {
     document.getElementById('login-container').classList.add('hidden');
 }
+
+/* JavaScript para alternar o menu hamburguer */
+document.querySelector('.menu-toggle').addEventListener('click', function() {
+    document.querySelector('nav ul').classList.toggle('show');
+});
