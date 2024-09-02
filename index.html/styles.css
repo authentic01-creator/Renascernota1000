@@ -10,7 +10,6 @@ body {
     overflow-x: hidden; /* Evita overflow horizontal */
 }
 
-
 /* Estilos do cabeçalho */
 header {
     background-color: rgb(31, 33, 39);
@@ -22,7 +21,6 @@ header {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adicionar sombra sutil */
 }
 
-
 /* Estilos do logotipo */
 .logo img {
     height: 40px;
@@ -30,8 +28,21 @@ header {
     border-radius: 50px;
 }
 
+/* Estilos do botão do menu */
+.menu-toggle {
+    display: none; /* Oculto por padrão */
+    font-size: 1.5em;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
 
 /* Estilos do menu de navegação */
+nav {
+    display: flex; /* Torna a navegação flexível */
+}
+
 nav ul {
     list-style: none;
     margin: 0;
@@ -39,11 +50,9 @@ nav ul {
     display: flex;
 }
 
-
 nav ul li {
     margin-left: 20px;
 }
-
 
 nav ul li a {
     color: #fff;
@@ -53,12 +62,10 @@ nav ul li a {
     transition: background-color 0.3s ease, color 0.3s ease; /* Transição suave */
 }
 
-
 nav ul li a:hover {
     background-color: #ff691e; /* Efeito de hover */
     color: #fff; /* Manter cor do texto no hover */
 }
-
 
 /* Estilos do conteúdo principal */
 main {
@@ -71,7 +78,6 @@ main {
     flex: 1;
 }
 
-
 /* Estilos do container das opções */
 .options {
     display: flex;
@@ -79,7 +85,6 @@ main {
     gap: 20px; /* Espaçamento entre as caixas */
     margin-top: 2em; /* Espaço acima das caixas */
 }
-
 
 /* Estilos das caixas de opção */
 .option-box {
@@ -95,13 +100,11 @@ main {
     position: relative;
 }
 
-
 /* Estilos específicos para a caixa de opção premium */
 .premium {
     background: linear-gradient(135deg, #f0c27b, #4b1248);
     color: #fff;
 }
-
 
 /* Efeito de hover nas caixas de opção */
 .option-box:hover {
@@ -109,13 +112,12 @@ main {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-
 /* Estilos do ícone dentro das caixas de opção */
 .option-icon {
     width: 60px;
     margin-bottom: 20px;
+    border-radius: 50px;
 }
-
 
 /* Estilos do rodapé */
 footer {
@@ -125,7 +127,6 @@ footer {
     padding: 1em;
     width: 100%;
 }
-
 
 /* Estilos específicos para a caixa de login */
 .login-container {
@@ -143,7 +144,6 @@ footer {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra mais pronunciada */
 }
 
-
 /* Estilos do botão de fechar */
 .close-btn {
     position: absolute; /* Posiciona o botão no canto superior direito */
@@ -157,20 +157,17 @@ footer {
     transition: color 0.3s ease; /* Transição suave */
 }
 
-
 /* Estilos do formulário dentro da caixa de login */
 .login-container form {
     display: flex; /* Layout flexível */
     flex-direction: column; /* Coluna para os campos do formulário */
 }
 
-
 .login-container label {
     margin-bottom: 0.5em; /* Espaço abaixo dos rótulos */
     font-weight: bold; /* Negrito */
     color: #333; /* Cor do texto */
 }
-
 
 .login-container input {
     margin-bottom: 1em; /* Espaço abaixo dos campos */
@@ -179,7 +176,6 @@ footer {
     border-radius: 5px; /* Bordas arredondadas */
     font-size: 1em; /* Tamanho da fonte */
 }
-
 
 .login-container button {
     padding: 0.75em; /* Espaçamento interno */
@@ -192,18 +188,16 @@ footer {
     font-size: 1em; /* Tamanho da fonte */
 }
 
-
 .login-container button:hover {
     background-color: #e55b3c; /* Cor de fundo ao passar o mouse */
 }
-
 
 /* Adiciona um estilo para esconder elementos com a classe 'hidden' */
 .hidden {
     display: none;
 }
 
-.option-icon { 
+.option-icon {
     border-radius: 50px;
 }
 
@@ -223,12 +217,24 @@ footer {
         padding: 1em;
     }
 
+    .menu-toggle {
+        display: block; /* Exibe o botão do menu em telas pequenas */
+    }
+
+    nav {
+        width: 100%; /* Garante que o menu ocupe toda a largura */
+    }
+
     nav ul {
-        display: flex;
+        display: none; /* Oculta o menu por padrão */
         flex-direction: column;
         width: 100%;
         margin: 0;
         padding: 0;
+    }
+
+    nav ul.show {
+        display: flex; /* Exibe o menu quando ativado */
     }
 
     nav ul li {
@@ -285,17 +291,19 @@ footer {
 /* Media query para exibir o menu hamburguer em telas pequenas */
 @media (max-width: 768px) {
     .menu-toggle {
-        display: block;
+        display: block; /* Exibe o botão do menu em telas pequenas */
     }
 
     nav ul {
-        display: none;
+        display: none; /* Oculta o menu por padrão */
         flex-direction: column;
         width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
     nav ul.show {
-        display: flex;
+        display: flex; /* Exibe o menu quando ativado */
     }
 }
 
